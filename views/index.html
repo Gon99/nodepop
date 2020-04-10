@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %>, these are our products:</p>
+    <h2>Products</h2>
+    <% advertisements.forEach(advertisement => { %>
+      <div class="main">
+        <h3><%=advertisement.nombre %></h3>
+        <!--<img class="imgAd" src="/images/<%=advertisement.foto%>">-->
+        <img class="imgAd" src="/images/<%=advertisement.foto%>">
+        <p>To sell: <%=advertisement.venta %></p>
+        <p><%=advertisement.tags %> </p>
+        <p><%=advertisement.precio %> €</p>
+      </div>
+    <% }) %>
+  </body>
+</html>

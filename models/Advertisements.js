@@ -10,10 +10,20 @@ const advertisementSchema = mongoose.Schema({
     tags: [String]
 });
 
-advertisementSchema.statics.lista = function(){
-    const query = Advertisements.find();
+advertisementSchema.statics.lista = function(filter, limit, skip, sort){
+    const query = Advertisements.find(filter);
+    query.limit(limit);
+    query.skip(skip);
+    query.sort(sort);
     return query.exec();
 };
+
+advertisementSchema.statics.allTags = async function(){
+    return await Advertisements.distinct('tags');
+    /*return this.find({
+        nombre: new RegExp(filter.nombre, 'i'),
+    });*/
+}
 
 const Advertisements = mongoose.model('Advertisements', advertisementSchema);
 

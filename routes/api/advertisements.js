@@ -2,7 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-
+const multer = require('multer');
+const upload = multer({ dest: 'public/images'});
 const Advertisement = require('../../models/Advertisements');
 
 /*
@@ -11,10 +12,9 @@ const Advertisement = require('../../models/Advertisements');
 */
 router.get('/', async (req, res, next) => {
     try {
-        const ads = await Advertisement.lista();
-        console.log("estoy aki");
-        res.json(ads);
+        const ads = await Advertisement.find();
         
+        res.json(ads);
     } catch (error) {
         next(error);
     }
@@ -24,12 +24,20 @@ router.get('/', async (req, res, next) => {
     POST /api/advertisements
     Create an ad
 */
-router.post('/', async (req, res, next) => {
+router.post('/', upload.single('foto'), async (req, res, next) => {
     try {
         const adData = req.body;
-
+        //const img = fs.readFileSync(req.file.path);
+        //const encode_img = img.toString('base64');
+        //const finalImg = {
+            //id: req.file.filename,
+            //contentType: req.file.mimetype,
+            //image: new Buffer(encode_img, 'base64')
+        //}
+        adData.foto = req.file.filename;
+        //adData.foto = req.file.originalname;
         const newAd = new Advertisement(adData);
-
+        //console.log("archivo",adData);
         const savedAd = await newAd.save();
 
         res.status(201).json({ result: savedAd });

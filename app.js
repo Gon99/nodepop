@@ -10,19 +10,17 @@ require('./lib/connectMongoose');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'html');
+app.engine('html', require('ejs').__express);
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.locals.title = 'Nodepop';
-
-app.use((req, res, next) => {
-    next();
-});
 
 /* RUTAS API */
 app.use('/api/advertisements', require('./routes/api/advertisements'));
