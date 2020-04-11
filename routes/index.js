@@ -26,7 +26,6 @@ router.get('/', [
   const venta = req.query.venta;
 
   const precio = req.query.precio;
-  //const signoPrecio = req.query.precio.replace(/[^0-9.]/g, "");
   const tag = req.query.tag;
   const filter = {};
 
@@ -40,12 +39,22 @@ router.get('/', [
     filter.venta = venta;
   }
   if (typeof precio !== 'undefined') {
-    filter.precio = { $gt : precio };
-    //const signoPrecio = req.query.precio.replace(/[^0-9.]/g, "");
-    //console.log("signoo ", signoPrecio);
+    if (precio.includes('-')){
+      const firstNumber = getFirstNumber(precio);
+      if (checkSign(precio) === 0){
+        filter.precio = { $lt : precio.substr(1)};
+      }else{
+        const secondNumber = getSecondNumber(precio);
+        if (secondNumber){
+          filter.precio = { $gt : firstNumber , $lt: secondNumber};
+        }else{
+          filter.precio = { $gt : firstNumber };
+        }
+      }
+    }else{
+      filter.precio = precio;
+    }
   }
-  const allTags = await Advertisements.allTags();
-  console.log(`los tags son ${allTags}`);
   const advertisements = await Advertisements.lista(filter,limit,skip,sort);
   if (advertisements.length === 0){
     res.send('There are no products with those filters');
@@ -56,5 +65,30 @@ router.get('/', [
     advertisements: advertisements,
   });
 });
+
+const getSecondNumber = (price) => {
+  let secondNumber = '';
+  let pos = price.indexOf('-');
+  while (pos < price.length - 1){
+    pos++;
+    secondNumber += price[pos];
+  }
+  return secondNumber;
+}
+
+const checkSign = (price) => {
+  if (price[0] === '-'){
+    return(0);
+  }
+  return(1);
+}
+
+const getFirstNumber = (price) => {
+  let firstNumber = '';
+  for (let index = 0; price[index] != '-'; index++) {
+    firstNumber += price[index];
+  }
+  return firstNumber;
+}
 
 module.exports = router;

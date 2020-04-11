@@ -23,7 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals.title = 'Nodepop';
 
 /* RUTAS API */
+app.use('/api/advertisements/tags', require('./routes/api/tags'));
 app.use('/api/advertisements', require('./routes/api/advertisements'));
+
 
 app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));

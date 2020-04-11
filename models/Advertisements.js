@@ -20,9 +20,6 @@ advertisementSchema.statics.lista = function(filter, limit, skip, sort){
 
 advertisementSchema.statics.allTags = async function(){
     return await Advertisements.distinct('tags');
-    /*return this.find({
-        nombre: new RegExp(filter.nombre, 'i'),
-    });*/
 }
 
 const Advertisements = mongoose.model('Advertisements', advertisementSchema);
