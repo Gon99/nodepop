@@ -5,8 +5,7 @@ const Advertisement = require('./models/Advertisements');
 
 conn.once('open', async () => {
     try {
-        await initAdvertisements();
-        //conn.close();     
+        await initAdvertisements();    
     } catch (error) {
         console.log(`Error: ${error}`);
         process.exit(1);
@@ -24,23 +23,3 @@ async function initAdvertisements() {
         }
     });
 }
-
-/*const initAdvertisements = async () => {
-    await Advertisement.deleteMany();
-    await Advertisement.insertMany([
-        {   
-            nombre: "Bicicleta",
-            venta: true,
-            precio: 230.15,
-            foto: "bici.jpg",
-            tags: ["lifestyle", "motor"]
-        },
-        {  
-            nombre: "iPhone 3GS",
-            venta: false,
-            precio: 50.00,
-            foto: "iphone.png",
-            tags: ["lifestyle", "mobile"]
-        }
-    ]);
-}*/

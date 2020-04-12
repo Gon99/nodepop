@@ -11,7 +11,7 @@ const Advertisements = require('../../models/Advertisements');
 router.get('/', async(req, res, next) => {
     try {
         const allTags = await Advertisements.allTags();
-        console.log(allTags);
+
         res.json({
             tags: allTags
         })

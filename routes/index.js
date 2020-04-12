@@ -2,23 +2,14 @@
 
 const express = require('express');
 const router = express.Router();
-const { query, check, validationResult } = require('express-validator');
-//const querystring = require('querystring');
-
+const { query, validationResult } = require('express-validator');
 const Advertisements = require('../models/Advertisements');
 
 /* GET home page. */
 router.get('/', [
-  check('venta').isBoolean().withMessage('should be boolean'),
+  query('venta').isBoolean().withMessage('should be boolean'),
 ],
  async (req, res, next) => {
-  //validationResult(req).throw();
-  /*const errors = validationResult(req);
-  if (!errors.isEmpty()){
-    const error = new Error('Invalid value');
-    error.status = 422;
-    next(error);
-  }*/
   const limit = parseInt(req.query.limit || 1000);
   const skip = parseInt(req.query.skip);
   const sort = req.query.sort;
@@ -36,6 +27,10 @@ router.get('/', [
     filter.tags = tag;
   }
   if (typeof venta !== 'undefined'){
+    const errors = validationResult(req);
+    if (!errors.isEmpty()){
+      return res.status(422).json({ error: errors.array()})
+    }
     filter.venta = venta;
   }
   if (typeof precio !== 'undefined') {
@@ -44,6 +39,9 @@ router.get('/', [
       if (checkSign(precio) === 0){
         filter.precio = { $lt : precio.substr(1)};
       }else{
+        if (!firstNumber){
+          next(new Error('Invalid value'));
+        }
         const secondNumber = getSecondNumber(precio);
         if (secondNumber){
           filter.precio = { $gt : firstNumber , $lt: secondNumber};
@@ -52,7 +50,13 @@ router.get('/', [
         }
       }
     }else{
-      filter.precio = precio;
+      const precioInt = parseInt(precio);
+      if(precioInt){
+        filter.precio = precioInt;
+      }else{
+        next(new Error('Invalid value'));
+      }
+
     }
   }
   const advertisements = await Advertisements.lista(filter,limit,skip,sort);
