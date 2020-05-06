@@ -4,17 +4,24 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
+  <nav>
+    <a href="/login">Login</a>
+  </nav>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %>, these are our products:</p>
-    <h2>Products</h2>
+    <% getLocales().forEach( locale => { %>
+      <a href="/change-locale/<%= locale %>"><%= locale %></a>&nbsp;
+      <!-- /change-locale va a poner una cookie de idioma y recargar la página -->
+    <% }) %>
+    <p><%= __('Welcome to') %> <%= title %>, <%= __('these are our')%> <%= __n('products',0)%>:</p>
+    <h2><%= __n('Products') %></h2>
     <% advertisements.forEach(advertisement => { %>
       <div class="main">
-        <h3><%=advertisement.nombre %></h3>
+        <h3><%= __('Name')%> <%=advertisement.nombre %></h3>
         <img class="imgAd" src="/images/<%=advertisement.foto%>">
-        <p>To sell: <%=advertisement.venta %></p>
-        <p><%=advertisement.tags %> </p>
-        <p><%=advertisement.precio %> €</p>
+        <p> <%= __('To sell')%>: <%=advertisement.venta %></p>
+        <p>Tags: <%=advertisement.tags %> </p>
+        <p><%= __('Price')%> <%=advertisement.precio %> €</p>
       </div>
     <% }) %>
   </body>

@@ -1,0 +1,477 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'bcrypt-nodejs' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData bcrypt-nodejs
+8 silly fetchNamedPackageData bcrypt-nodejs
+9 silly mapToRegistry name bcrypt-nodejs
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/bcrypt-nodejs
+13 verbose request uri https://registry.npmjs.org/bcrypt-nodejs
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 13:00:33
+16 verbose request id 5f4f0ca20a74e62e
+17 verbose etag W/"610452e25a94a541bc390b9ecd0b3f78"
+18 verbose lastModified Fri, 10 May 2019 16:04:40 GMT
+19 http request GET https://registry.npmjs.org/bcrypt-nodejs
+20 http 304 https://registry.npmjs.org/bcrypt-nodejs
+21 verbose headers { date: 'Tue, 05 May 2020 11:00:33 GMT',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'set-cookie':
+21 verbose headers    [ '__cfduid=daf03843057456bd20a0cc00f4a7f29181588676433; expires=Thu, 04-Jun-20 11:00:33 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+21 verbose headers   'cf-ray': '58e9f55f6a7fff00-MAD',
+21 verbose headers   age: '3903',
+21 verbose headers   'cache-control': 'public, max-age=300',
+21 verbose headers   etag: '"610452e25a94a541bc390b9ecd0b3f78"',
+21 verbose headers   'last-modified': 'Fri, 10 May 2019 16:04:40 GMT',
+21 verbose headers   vary: 'Accept-Encoding',
+21 verbose headers   'cf-cache-status': 'HIT',
+21 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 verbose headers   server: 'cloudflare',
+21 verbose headers   'cf-request-id': '028617afa10000ff0007270200000001' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Tue, 05 May 2020 11:00:33 GMT',
+22 silly get     connection: 'keep-alive',
+22 silly get     'set-cookie':
+22 silly get      [ '__cfduid=daf03843057456bd20a0cc00f4a7f29181588676433; expires=Thu, 04-Jun-20 11:00:33 GMT; path=/; domain=.npmjs.org; HttpOnly; SameSite=Lax' ],
+22 silly get     'cf-ray': '58e9f55f6a7fff00-MAD',
+22 silly get     age: '3903',
+22 silly get     'cache-control': 'public, max-age=300',
+22 silly get     etag: '"610452e25a94a541bc390b9ecd0b3f78"',
+22 silly get     'last-modified': 'Fri, 10 May 2019 16:04:40 GMT',
+22 silly get     vary: 'Accept-Encoding',
+22 silly get     'cf-cache-status': 'HIT',
+22 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+22 silly get     server: 'cloudflare',
+22 silly get     'cf-request-id': '028617afa10000ff0007270200000001' } ]
+23 verbose etag https://registry.npmjs.org/bcrypt-nodejs from cache
+24 verbose get saving bcrypt-nodejs to /home/amnesia/.npm/registry.npmjs.org/bcrypt-nodejs/.cache.json
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly resolveWithNewModule bcrypt-nodejs@0.0.3 checking installable status
+38 silly cache add args [ 'bcrypt-nodejs', null ]
+39 verbose cache add spec bcrypt-nodejs
+40 silly cache add parsed spec Result {
+40 silly cache add   raw: 'bcrypt-nodejs',
+40 silly cache add   scope: null,
+40 silly cache add   name: 'bcrypt-nodejs',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: 'latest',
+40 silly cache add   type: 'tag' }
+41 silly addNamed bcrypt-nodejs@latest
+42 verbose addNamed "latest" is being treated as a dist-tag for bcrypt-nodejs
+43 info addNameTag [ 'bcrypt-nodejs', 'latest' ]
+44 silly mapToRegistry name bcrypt-nodejs
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/bcrypt-nodejs
+48 verbose addNameTag registry:https://registry.npmjs.org/bcrypt-nodejs not in flight; fetching
+49 verbose get https://registry.npmjs.org/bcrypt-nodejs not expired, no request
+50 silly addNameTag next cb for bcrypt-nodejs with tag latest
+51 silly addNamed bcrypt-nodejs@0.0.3
+52 verbose addNamed "0.0.3" is a plain semver version for bcrypt-nodejs
+53 warn deprecated bcrypt-nodejs@0.0.3: bcrypt-nodejs is no longer actively maintained. Please use bcrypt or bcryptjs. See https://github.com/kelektiv/node.bcrypt.js/wiki/bcrypt-vs-brypt.js to learn more about these two options
+54 silly cache afterAdd bcrypt-nodejs@0.0.3
+55 verbose afterAdd /home/amnesia/.npm/bcrypt-nodejs/0.0.3/package/package.json not in flight; writing
+56 verbose afterAdd /home/amnesia/.npm/bcrypt-nodejs/0.0.3/package/package.json written
+57 silly loadAllDepsIntoIdealTree Finishing
+58 silly idealTree:prePrune application-name@0.0.1
+58 silly idealTree:prePrune ├── accepts@1.0.0
+58 silly idealTree:prePrune ├── append-field@1.0.0
+58 silly idealTree:prePrune ├── bcrypt-nodejs@0.0.3
+58 silly idealTree:prePrune ├── bl@2.2.0
+58 silly idealTree:prePrune ├── bluebird@3.5.1
+58 silly idealTree:prePrune ├── body-parser@1.0.2
+58 silly idealTree:prePrune ├── bson@1.1.4
+58 silly idealTree:prePrune ├── buffer-crc32@0.2.1
+58 silly idealTree:prePrune ├── buffer-equal-constant-time@1.0.1
+58 silly idealTree:prePrune ├── buffer-from@1.1.1
+58 silly idealTree:prePrune ├─┬ busboy@0.2.14
+58 silly idealTree:prePrune │ ├── isarray@0.0.1
+58 silly idealTree:prePrune │ └── readable-stream@1.1.14
+58 silly idealTree:prePrune ├── bytes@1.0.0
+58 silly idealTree:prePrune ├── concat-stream@1.6.2
+58 silly idealTree:prePrune ├── cookie-parser@1.0.1
+58 silly idealTree:prePrune ├── cookie-signature@1.0.3
+58 silly idealTree:prePrune ├── cookie@0.1.0
+58 silly idealTree:prePrune ├── core-util-is@1.0.2
+58 silly idealTree:prePrune ├── cross-env@7.0.2
+58 silly idealTree:prePrune ├── cross-spawn@7.0.1
+58 silly idealTree:prePrune ├── debug@0.7.4
+58 silly idealTree:prePrune ├── denque@1.4.1
+58 silly idealTree:prePrune ├─┬ dicer@0.2.5
+58 silly idealTree:prePrune │ ├── isarray@0.0.1
+58 silly idealTree:prePrune │ └── readable-stream@1.1.14
+58 silly idealTree:prePrune ├── dotenv@8.2.0
+58 silly idealTree:prePrune ├── ecdsa-sig-formatter@1.0.11
+58 silly idealTree:prePrune ├── ee-first@1.1.1
+58 silly idealTree:prePrune ├── ejs@0.8.8
+58 silly idealTree:prePrune ├── escape-html@1.0.1
+58 silly idealTree:prePrune ├── express-validator@6.4.0
+58 silly idealTree:prePrune ├─┬ express@4.0.0
+58 silly idealTree:prePrune │ └── type-is@1.0.0
+58 silly idealTree:prePrune ├── fresh@0.2.2
+58 silly idealTree:prePrune ├── i18n@0.9.1
+58 silly idealTree:prePrune ├── inherits@2.0.4
+58 silly idealTree:prePrune ├── isarray@1.0.0
+58 silly idealTree:prePrune ├── isexe@2.0.0
+58 silly idealTree:prePrune ├── jsonwebtoken@8.5.1
+58 silly idealTree:prePrune ├── jwa@1.4.1
+58 silly idealTree:prePrune ├── jws@3.2.2
+58 silly idealTree:prePrune ├── kareem@2.3.1
+58 silly idealTree:prePrune ├── lodash.includes@4.3.0
+58 silly idealTree:prePrune ├── lodash.isboolean@3.0.3
+58 silly idealTree:prePrune ├── lodash.isinteger@4.0.4
+58 silly idealTree:prePrune ├── lodash.isnumber@3.0.3
+58 silly idealTree:prePrune ├── lodash.isplainobject@4.0.6
+58 silly idealTree:prePrune ├── lodash.isstring@4.0.1
+58 silly idealTree:prePrune ├── lodash.once@4.1.1
+58 silly idealTree:prePrune ├── lodash@4.17.15
+58 silly idealTree:prePrune ├── make-plural@6.2.1
+58 silly idealTree:prePrune ├── math-interval-parser@2.0.1
+58 silly idealTree:prePrune ├── media-typer@0.3.0
+58 silly idealTree:prePrune ├── memory-pager@1.5.0
+58 silly idealTree:prePrune ├── merge-descriptors@0.0.2
+58 silly idealTree:prePrune ├── messageformat-formatters@2.0.1
+58 silly idealTree:prePrune ├── messageformat-parser@4.1.3
+58 silly idealTree:prePrune ├─┬ messageformat@2.3.0
+58 silly idealTree:prePrune │ └── make-plural@4.3.0
+58 silly idealTree:prePrune ├── methods@0.1.0
+58 silly idealTree:prePrune ├── mime-db@1.43.0
+58 silly idealTree:prePrune ├── mime-types@2.1.26
+58 silly idealTree:prePrune ├── mime@1.2.11
+58 silly idealTree:prePrune ├── minimist@1.2.5
+58 silly idealTree:prePrune ├── mkdirp@0.5.5
+58 silly idealTree:prePrune ├── mongodb@3.5.7
+58 silly idealTree:prePrune ├── mongoose-legacy-pluralize@1.0.2
+58 silly idealTree:prePrune ├── mongoose@5.9.12
+58 silly idealTree:prePrune ├─┬ morgan@1.0.1
+58 silly idealTree:prePrune │ └── bytes@0.3.0
+58 silly idealTree:prePrune ├── mpath@0.7.0
+58 silly idealTree:prePrune ├─┬ mquery@3.2.2
+58 silly idealTree:prePrune │ ├── debug@3.1.0
+58 silly idealTree:prePrune │ └── ms@2.0.0
+58 silly idealTree:prePrune ├── ms@2.1.2
+58 silly idealTree:prePrune ├─┬ multer@1.4.2
+58 silly idealTree:prePrune │ └── type-is@1.6.18
+58 silly idealTree:prePrune ├── mustache@4.0.1
+58 silly idealTree:prePrune ├── negotiator@0.3.0
+58 silly idealTree:prePrune ├── object-assign@4.1.1
+58 silly idealTree:prePrune ├── on-finished@2.3.0
+58 silly idealTree:prePrune ├── parseurl@1.0.1
+58 silly idealTree:prePrune ├── path-key@3.1.1
+58 silly idealTree:prePrune ├── path-to-regexp@0.1.2
+58 silly idealTree:prePrune ├── process-nextick-args@2.0.1
+58 silly idealTree:prePrune ├── qs@0.6.6
+58 silly idealTree:prePrune ├── range-parser@1.0.0
+58 silly idealTree:prePrune ├── raw-body@1.1.7
+58 silly idealTree:prePrune ├─┬ readable-stream@2.3.7
+58 silly idealTree:prePrune │ └── string_decoder@1.1.1
+58 silly idealTree:prePrune ├── regexp-clone@1.0.0
+58 silly idealTree:prePrune ├── require_optional@1.0.1
+58 silly idealTree:prePrune ├── resolve-from@2.0.0
+58 silly idealTree:prePrune ├── safe-buffer@5.1.2
+58 silly idealTree:prePrune ├── saslprep@1.0.3
+58 silly idealTree:prePrune ├── semver@5.7.1
+58 silly idealTree:prePrune ├── send@0.2.0
+58 silly idealTree:prePrune ├─┬ serve-static@1.0.1
+58 silly idealTree:prePrune │ ├── fresh@0.2.0
+58 silly idealTree:prePrune │ ├── range-parser@0.0.4
+58 silly idealTree:prePrune │ └── send@0.1.4
+58 silly idealTree:prePrune ├── shebang-command@2.0.0
+58 silly idealTree:prePrune ├── shebang-regex@3.0.0
+58 silly idealTree:prePrune ├── sift@7.0.1
+58 silly idealTree:prePrune ├── sliced@1.0.1
+58 silly idealTree:prePrune ├── sparse-bitfield@3.0.3
+58 silly idealTree:prePrune ├── sprintf-js@1.1.2
+58 silly idealTree:prePrune ├── static-favicon@1.0.2
+58 silly idealTree:prePrune ├── streamsearch@0.1.2
+58 silly idealTree:prePrune ├── string_decoder@0.10.31
+58 silly idealTree:prePrune ├── type-is@1.1.0
+58 silly idealTree:prePrune ├── typedarray@0.0.6
+58 silly idealTree:prePrune ├── util-deprecate@1.0.2
+58 silly idealTree:prePrune ├── utils-merge@1.0.0
+58 silly idealTree:prePrune ├── validator@12.2.0
+58 silly idealTree:prePrune ├── which@2.0.2
+58 silly idealTree:prePrune └── xtend@4.0.2
+59 silly loadIdealTree Finishing
+60 silly currentTree application-name@0.0.1
+60 silly currentTree ├── accepts@1.0.0
+60 silly currentTree ├── append-field@1.0.0
+60 silly currentTree ├── bl@2.2.0
+60 silly currentTree ├── bluebird@3.5.1
+60 silly currentTree ├── body-parser@1.0.2
+60 silly currentTree ├── bson@1.1.4
+60 silly currentTree ├── buffer-crc32@0.2.1
+60 silly currentTree ├── buffer-equal-constant-time@1.0.1
+60 silly currentTree ├── buffer-from@1.1.1
+60 silly currentTree ├─┬ busboy@0.2.14
+60 silly currentTree │ ├── isarray@0.0.1
+60 silly currentTree │ └── readable-stream@1.1.14
+60 silly currentTree ├── bytes@1.0.0
+60 silly currentTree ├── concat-stream@1.6.2
+60 silly currentTree ├── cookie-parser@1.0.1
+60 silly currentTree ├── cookie-signature@1.0.3
+60 silly currentTree ├── cookie@0.1.0
+60 silly currentTree ├── core-util-is@1.0.2
+60 silly currentTree ├── cross-env@7.0.2
+60 silly currentTree ├── cross-spawn@7.0.1
+60 silly currentTree ├── debug@0.7.4
+60 silly currentTree ├── denque@1.4.1
+60 silly currentTree ├─┬ dicer@0.2.5
+60 silly currentTree │ ├── isarray@0.0.1
+60 silly currentTree │ └── readable-stream@1.1.14
+60 silly currentTree ├── dotenv@8.2.0
+60 silly currentTree ├── ecdsa-sig-formatter@1.0.11
+60 silly currentTree ├── ee-first@1.1.1
+60 silly currentTree ├── ejs@0.8.8
+60 silly currentTree ├── escape-html@1.0.1
+60 silly currentTree ├── express-validator@6.4.0
+60 silly currentTree ├─┬ express@4.0.0
+60 silly currentTree │ └── type-is@1.0.0
+60 silly currentTree ├── fresh@0.2.2
+60 silly currentTree ├── i18n@0.9.1
+60 silly currentTree ├── inherits@2.0.4
+60 silly currentTree ├── isarray@1.0.0
+60 silly currentTree ├── isexe@2.0.0
+60 silly currentTree ├── jsonwebtoken@8.5.1
+60 silly currentTree ├── jwa@1.4.1
+60 silly currentTree ├── jws@3.2.2
+60 silly currentTree ├── kareem@2.3.1
+60 silly currentTree ├── lodash.includes@4.3.0
+60 silly currentTree ├── lodash.isboolean@3.0.3
+60 silly currentTree ├── lodash.isinteger@4.0.4
+60 silly currentTree ├── lodash.isnumber@3.0.3
+60 silly currentTree ├── lodash.isplainobject@4.0.6
+60 silly currentTree ├── lodash.isstring@4.0.1
+60 silly currentTree ├── lodash.once@4.1.1
+60 silly currentTree ├── lodash@4.17.15
+60 silly currentTree ├── make-plural@6.2.1
+60 silly currentTree ├── math-interval-parser@2.0.1
+60 silly currentTree ├── media-typer@0.3.0
+60 silly currentTree ├── memory-pager@1.5.0
+60 silly currentTree ├── merge-descriptors@0.0.2
+60 silly currentTree ├── messageformat-formatters@2.0.1
+60 silly currentTree ├── messageformat-parser@4.1.3
+60 silly currentTree ├─┬ messageformat@2.3.0
+60 silly currentTree │ └── make-plural@4.3.0
+60 silly currentTree ├── methods@0.1.0
+60 silly currentTree ├── mime-db@1.43.0
+60 silly currentTree ├── mime-types@2.1.26
+60 silly currentTree ├── mime@1.2.11
+60 silly currentTree ├── minimist@1.2.5
+60 silly currentTree ├── mkdirp@0.5.5
+60 silly currentTree ├── mongodb@3.5.7
+60 silly currentTree ├── mongoose-legacy-pluralize@1.0.2
+60 silly currentTree ├── mongoose@5.9.12
+60 silly currentTree ├─┬ morgan@1.0.1
+60 silly currentTree │ └── bytes@0.3.0
+60 silly currentTree ├── mpath@0.7.0
+60 silly currentTree ├─┬ mquery@3.2.2
+60 silly currentTree │ ├── debug@3.1.0
+60 silly currentTree │ └── ms@2.0.0
+60 silly currentTree ├── ms@2.1.2
+60 silly currentTree ├─┬ multer@1.4.2
+60 silly currentTree │ └── type-is@1.6.18
+60 silly currentTree ├── mustache@4.0.1
+60 silly currentTree ├── negotiator@0.3.0
+60 silly currentTree ├── object-assign@4.1.1
+60 silly currentTree ├── on-finished@2.3.0
+60 silly currentTree ├── parseurl@1.0.1
+60 silly currentTree ├── path-key@3.1.1
+60 silly currentTree ├── path-to-regexp@0.1.2
+60 silly currentTree ├── process-nextick-args@2.0.1
+60 silly currentTree ├── qs@0.6.6
+60 silly currentTree ├── range-parser@1.0.0
+60 silly currentTree ├── raw-body@1.1.7
+60 silly currentTree ├─┬ readable-stream@2.3.7
+60 silly currentTree │ └── string_decoder@1.1.1
+60 silly currentTree ├── regexp-clone@1.0.0
+60 silly currentTree ├── require_optional@1.0.1
+60 silly currentTree ├── resolve-from@2.0.0
+60 silly currentTree ├── safe-buffer@5.1.2
+60 silly currentTree ├── saslprep@1.0.3
+60 silly currentTree ├── semver@5.7.1
+60 silly currentTree ├── send@0.2.0
+60 silly currentTree ├─┬ serve-static@1.0.1
+60 silly currentTree │ ├── fresh@0.2.0
+60 silly currentTree │ ├── range-parser@0.0.4
+60 silly currentTree │ └── send@0.1.4
+60 silly currentTree ├── shebang-command@2.0.0
+60 silly currentTree ├── shebang-regex@3.0.0
+60 silly currentTree ├── sift@7.0.1
+60 silly currentTree ├── sliced@1.0.1
+60 silly currentTree ├── sparse-bitfield@3.0.3
+60 silly currentTree ├── sprintf-js@1.1.2
+60 silly currentTree ├── static-favicon@1.0.2
+60 silly currentTree ├── streamsearch@0.1.2
+60 silly currentTree ├── string_decoder@0.10.31
+60 silly currentTree ├── type-is@1.1.0
+60 silly currentTree ├── typedarray@0.0.6
+60 silly currentTree ├── util-deprecate@1.0.2
+60 silly currentTree ├── utils-merge@1.0.0
+60 silly currentTree ├── validator@12.2.0
+60 silly currentTree ├── which@2.0.2
+60 silly currentTree └── xtend@4.0.2
+61 silly idealTree application-name@0.0.1
+61 silly idealTree ├── accepts@1.0.0
+61 silly idealTree ├── append-field@1.0.0
+61 silly idealTree ├── bcrypt-nodejs@0.0.3
+61 silly idealTree ├── bl@2.2.0
+61 silly idealTree ├── bluebird@3.5.1
+61 silly idealTree ├── body-parser@1.0.2
+61 silly idealTree ├── bson@1.1.4
+61 silly idealTree ├── buffer-crc32@0.2.1
+61 silly idealTree ├── buffer-equal-constant-time@1.0.1
+61 silly idealTree ├── buffer-from@1.1.1
+61 silly idealTree ├─┬ busboy@0.2.14
+61 silly idealTree │ ├── isarray@0.0.1
+61 silly idealTree │ └── readable-stream@1.1.14
+61 silly idealTree ├── bytes@1.0.0
+61 silly idealTree ├── concat-stream@1.6.2
+61 silly idealTree ├── cookie-parser@1.0.1
+61 silly idealTree ├── cookie-signature@1.0.3
+61 silly idealTree ├── cookie@0.1.0
+61 silly idealTree ├── core-util-is@1.0.2
+61 silly idealTree ├── cross-env@7.0.2
+61 silly idealTree ├── cross-spawn@7.0.1
+61 silly idealTree ├── debug@0.7.4
+61 silly idealTree ├── denque@1.4.1
+61 silly idealTree ├─┬ dicer@0.2.5
+61 silly idealTree │ ├── isarray@0.0.1
+61 silly idealTree │ └── readable-stream@1.1.14
+61 silly idealTree ├── dotenv@8.2.0
+61 silly idealTree ├── ecdsa-sig-formatter@1.0.11
+61 silly idealTree ├── ee-first@1.1.1
+61 silly idealTree ├── ejs@0.8.8
+61 silly idealTree ├── escape-html@1.0.1
+61 silly idealTree ├── express-validator@6.4.0
+61 silly idealTree ├─┬ express@4.0.0
+61 silly idealTree │ └── type-is@1.0.0
+61 silly idealTree ├── fresh@0.2.2
+61 silly idealTree ├── i18n@0.9.1
+61 silly idealTree ├── inherits@2.0.4
+61 silly idealTree ├── isarray@1.0.0
+61 silly idealTree ├── isexe@2.0.0
+61 silly idealTree ├── jsonwebtoken@8.5.1
+61 silly idealTree ├── jwa@1.4.1
+61 silly idealTree ├── jws@3.2.2
+61 silly idealTree ├── kareem@2.3.1
+61 silly idealTree ├── lodash.includes@4.3.0
+61 silly idealTree ├── lodash.isboolean@3.0.3
+61 silly idealTree ├── lodash.isinteger@4.0.4
+61 silly idealTree ├── lodash.isnumber@3.0.3
+61 silly idealTree ├── lodash.isplainobject@4.0.6
+61 silly idealTree ├── lodash.isstring@4.0.1
+61 silly idealTree ├── lodash.once@4.1.1
+61 silly idealTree ├── lodash@4.17.15
+61 silly idealTree ├── make-plural@6.2.1
+61 silly idealTree ├── math-interval-parser@2.0.1
+61 silly idealTree ├── media-typer@0.3.0
+61 silly idealTree ├── memory-pager@1.5.0
+61 silly idealTree ├── merge-descriptors@0.0.2
+61 silly idealTree ├── messageformat-formatters@2.0.1
+61 silly idealTree ├── messageformat-parser@4.1.3
+61 silly idealTree ├─┬ messageformat@2.3.0
+61 silly idealTree │ └── make-plural@4.3.0
+61 silly idealTree ├── methods@0.1.0
+61 silly idealTree ├── mime-db@1.43.0
+61 silly idealTree ├── mime-types@2.1.26
+61 silly idealTree ├── mime@1.2.11
+61 silly idealTree ├── minimist@1.2.5
+61 silly idealTree ├── mkdirp@0.5.5
+61 silly idealTree ├── mongodb@3.5.7
+61 silly idealTree ├── mongoose-legacy-pluralize@1.0.2
+61 silly idealTree ├── mongoose@5.9.12
+61 silly idealTree ├─┬ morgan@1.0.1
+61 silly idealTree │ └── bytes@0.3.0
+61 silly idealTree ├── mpath@0.7.0
+61 silly idealTree ├─┬ mquery@3.2.2
+61 silly idealTree │ ├── debug@3.1.0
+61 silly idealTree │ └── ms@2.0.0
+61 silly idealTree ├── ms@2.1.2
+61 silly idealTree ├─┬ multer@1.4.2
+61 silly idealTree │ └── type-is@1.6.18
+61 silly idealTree ├── mustache@4.0.1
+61 silly idealTree ├── negotiator@0.3.0
+61 silly idealTree ├── object-assign@4.1.1
+61 silly idealTree ├── on-finished@2.3.0
+61 silly idealTree ├── parseurl@1.0.1
+61 silly idealTree ├── path-key@3.1.1
+61 silly idealTree ├── path-to-regexp@0.1.2
+61 silly idealTree ├── process-nextick-args@2.0.1
+61 silly idealTree ├── qs@0.6.6
+61 silly idealTree ├── range-parser@1.0.0
+61 silly idealTree ├── raw-body@1.1.7
+61 silly idealTree ├─┬ readable-stream@2.3.7
+61 silly idealTree │ └── string_decoder@1.1.1
+61 silly idealTree ├── regexp-clone@1.0.0
+61 silly idealTree ├── require_optional@1.0.1
+61 silly idealTree ├── resolve-from@2.0.0
+61 silly idealTree ├── safe-buffer@5.1.2
+61 silly idealTree ├── saslprep@1.0.3
+61 silly idealTree ├── semver@5.7.1
+61 silly idealTree ├── send@0.2.0
+61 silly idealTree ├─┬ serve-static@1.0.1
+61 silly idealTree │ ├── fresh@0.2.0
+61 silly idealTree │ ├── range-parser@0.0.4
+61 silly idealTree │ └── send@0.1.4
+61 silly idealTree ├── shebang-command@2.0.0
+61 silly idealTree ├── shebang-regex@3.0.0
+61 silly idealTree ├── sift@7.0.1
+61 silly idealTree ├── sliced@1.0.1
+61 silly idealTree ├── sparse-bitfield@3.0.3
+61 silly idealTree ├── sprintf-js@1.1.2
+61 silly idealTree ├── static-favicon@1.0.2
+61 silly idealTree ├── streamsearch@0.1.2
+61 silly idealTree ├── string_decoder@0.10.31
+61 silly idealTree ├── type-is@1.1.0
+61 silly idealTree ├── typedarray@0.0.6
+61 silly idealTree ├── util-deprecate@1.0.2
+61 silly idealTree ├── utils-merge@1.0.0
+61 silly idealTree ├── validator@12.2.0
+61 silly idealTree ├── which@2.0.2
+61 silly idealTree └── xtend@4.0.2
+62 silly generateActionsToTake Starting
+63 silly install generateActionsToTake
+64 warn checkPermissions Missing write access to /home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/dotenv
+65 warn checkPermissions Missing write access to /home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/i18n
+66 warn checkPermissions Missing write access to /home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/jsonwebtoken
+67 warn checkPermissions Missing write access to /home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/mongoose
+68 silly rollbackFailedOptional Starting
+69 silly rollbackFailedOptional Finishing
+70 silly runTopLevelLifecycles Starting
+71 silly runTopLevelLifecycles Finishing
+72 silly install printInstalled
+73 verbose stack Error: EACCES: permission denied, access '/home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/dotenv'
+74 verbose cwd /home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop
+75 error Linux 4.15.0-54-generic
+76 error argv "/usr/bin/node" "/usr/bin/npm" "install" "bcrypt-nodejs"
+77 error node v8.10.0
+78 error npm  v3.5.2
+79 error path /home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/dotenv
+80 error code EACCES
+81 error errno -13
+82 error syscall access
+83 error Error: EACCES: permission denied, access '/home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/dotenv'
+83 error  { Error: EACCES: permission denied, access '/home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/dotenv'
+83 error   errno: -13,
+83 error   code: 'EACCES',
+83 error   syscall: 'access',
+83 error   path: '/home/amnesia/Documentos/KeepCoding/BackendAvanzado/Practica/nodepop/node_modules/dotenv' }
+84 error Please try running this command again as root/Administrator.
+85 verbose exit [ -13, true ]

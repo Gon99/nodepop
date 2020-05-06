@@ -12,6 +12,7 @@ const Advertisement = require('../../models/Advertisements');
 */
 router.get('/', async (req, res, next) => {
     try {
+        console.log("/get/advertisements");
         const ads = await Advertisement.find();
         
         res.json(ads);
@@ -25,9 +26,10 @@ router.get('/', async (req, res, next) => {
     Create an ad
 */
 router.post('/', upload.single('foto'), async (req, res, next) => {
+    console.log("Hola");
     try {
         const adData = req.body;
-
+        console.log('adData',adData);
         adData.foto = req.file.filename;
         const newAd = new Advertisement(adData);
         const savedAd = await newAd.save();

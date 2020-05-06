@@ -1,0 +1,13 @@
+{
+	"Welcome to": "Bienvenido a",
+	"these are our": "Estos son nuestros",
+	"Products": "Productos",
+	"To sell": "Para vender",
+	"Password": "Contraseña",
+	"products": {
+		"one": "products",
+		"other": "products"
+	},
+	"Name": "Nombre",
+	"Price": "Precio"
+}

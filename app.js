@@ -3,6 +3,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+require('dotenv').config();
 
 var app = express();
 
@@ -20,14 +21,22 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+/* i18n Configure */
+const i18n = require('./lib/i18nConfigure')();
+app.use(i18n.init);
+
 app.locals.title = 'Nodepop';
+const jwtAuth = require('./lib/jwtAuth');
 
 /* RUTAS API */
 app.use('/api/advertisements/tags', require('./routes/api/tags'));
-app.use('/api/advertisements', require('./routes/api/advertisements'));
+app.use('/api/advertisements',jwtAuth() ,require('./routes/api/advertisements'));
 
+app.use('/change-locale', require('./routes/change-locale'));
 
+/* RUTAS WEBSITE */
 app.use('/', require('./routes/index'));
+app.use('/login', require('./routes/login/loginRouting'));
 app.use('/users', require('./routes/users'));
 
 /// catch 404 and forwarding to error handler

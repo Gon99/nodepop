@@ -16,3 +16,7 @@ a {
   height: 300px;
   width: 400px;
 }
+
+#error {
+  color: red;
+}

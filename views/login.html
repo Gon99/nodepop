@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <nav>
+    <a href="/">Index</a>
+  </nav>
+  <body>
+    <h1>Bienvenido al Login</h1>
+    <form class="loginForm" method="POST">
+        <div>
+            <label>Email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label><%= __('Password') %></label>
+            <input type="password" name="password">
+        </div>
+        <p id="error"><%=error %></p>
+        <button type="submit">Login</button>
+    </form>
+  </body>
+</html>

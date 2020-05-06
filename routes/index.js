@@ -65,7 +65,6 @@ router.get('/', [
   }
   
   res.render('index', {
-    title: 'Nodepop',
     advertisements: advertisements,
   });
 });
