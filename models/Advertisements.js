@@ -6,7 +6,11 @@ const advertisementSchema = mongoose.Schema({
     nombre: String,
     venta: Boolean,
     precio: Number,
-    foto: String,
+    //foto: String,
+    foto: {
+        originalFoto: String,
+        thumbnail: String,
+    },
     tags: [String]
 });
 

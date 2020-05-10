@@ -12,7 +12,6 @@ const Advertisement = require('../../models/Advertisements');
 */
 router.get('/', async (req, res, next) => {
     try {
-        console.log("/get/advertisements");
         const ads = await Advertisement.find();
         
         res.json(ads);
@@ -25,12 +24,17 @@ router.get('/', async (req, res, next) => {
     POST /api/advertisements
     Create an ad
 */
-router.post('/', upload.single('foto'), async (req, res, next) => {
-    console.log("Hola");
+router.post('/', upload.single('originalFoto'), async (req, res, next) => {
     try {
         const adData = req.body;
-        console.log('adData',adData);
-        adData.foto = req.file.filename;
+        const pusblisher = require('../microservices/thumbnail_publisher');
+
+        pusblisher(req.file.filename);
+        adData.foto = {
+            originalFoto: req.file.filename,
+            thumbnail: req.file.filename + '_thumbnail'
+        }
+
         const newAd = new Advertisement(adData);
         const savedAd = await newAd.save();
 

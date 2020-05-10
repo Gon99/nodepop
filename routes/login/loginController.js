@@ -6,6 +6,7 @@ const User = require('../../models/Users');
 
 class LoginController {
     index(req, res, next){
+        console.log("en el index");
         res.render('login',{
             error: ''
         });
@@ -20,7 +21,6 @@ class LoginController {
             if (!user || !bcrypt.compareSync(password, user.password)){
                 // const error = new Error('Invalid credentials');
                 // error.status = 401;
-                console.log("entrp");
                 res.render('login', {
                     error: 'Invalid credentials',
                 });
@@ -36,6 +36,11 @@ class LoginController {
         } catch (err){
             next(err);
         }
+    }
+
+    logout(req, res, next){
+        res.cookie('token', '');
+        res.redirect('/');
     }
 }
 

@@ -29,14 +29,16 @@ app.locals.title = 'Nodepop';
 const jwtAuth = require('./lib/jwtAuth');
 
 /* RUTAS API */
-app.use('/api/advertisements/tags', require('./routes/api/tags'));
-app.use('/api/advertisements',jwtAuth() ,require('./routes/api/advertisements'));
+app.use('/api/advertisements/tags',jwtAuth(), require('./routes/api/tags'));
+app.use('/api/advertisements', jwtAuth(),require('./routes/api/advertisements'));
 
 app.use('/change-locale', require('./routes/change-locale'));
 
+//const loginController = require('./routes/login/loginController');
 /* RUTAS WEBSITE */
 app.use('/', require('./routes/index'));
 app.use('/login', require('./routes/login/loginRouting'));
+app.use('/logout', require('./routes/login/loginRouting'));
 app.use('/users', require('./routes/users'));
 
 /// catch 404 and forwarding to error handler

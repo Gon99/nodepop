@@ -6,6 +6,7 @@
   </head>
   <nav>
     <a href="/login">Login</a>
+    <a href="/logout">Logout</a>
   </nav>
   <body>
     <h1><%= title %></h1>
@@ -18,7 +19,12 @@
     <% advertisements.forEach(advertisement => { %>
       <div class="main">
         <h3><%= __('Name')%> <%=advertisement.nombre %></h3>
-        <img class="imgAd" src="/images/<%=advertisement.foto%>">
+        <!--<img class="imgAd" src="/images/hola">-->
+        <% if (advertisement.foto.thumbnail != "") { %>
+          <img class="imgAd" src="/images/<%=advertisement.foto.thumbnail%>">
+        <% } else { %> 
+          <img class="imgAd" src="/images/<%=advertisement.foto.originalFoto%>">
+        <% } %>
         <p> <%= __('To sell')%>: <%=advertisement.venta %></p>
         <p>Tags: <%=advertisement.tags %> </p>
         <p><%= __('Price')%> <%=advertisement.precio %> €</p>
