@@ -42,3 +42,8 @@ Example:
 ```
 http:localhost:3000/?precio=-50&venta=true&name=i&limit=5
 ```
+
+#Despliegue en servidor
+
+Práctica React: 3.20.223.19
+Práctica Node: ec2-3-20-223-19.us-east-2.compute.amazonaws.com
